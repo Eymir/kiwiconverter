@@ -11,7 +11,8 @@ public class main extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         TextView wert1 = (TextView)findViewById(R.id.wert1);
-        wert1.setText("1 €");
+        String text = "1 € " + getText(R.string.ist) + " 0,5 NZD";
+        wert1.setText(text);
         
         
     }
