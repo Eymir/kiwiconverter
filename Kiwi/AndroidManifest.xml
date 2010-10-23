@@ -22,4 +22,6 @@
                android:resource="@xml/kiwi_appwidget_info" />
 </receiver>
 
+
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest> 
