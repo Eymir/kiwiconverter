@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Kiwi Converter</string>
+    
     <string name="app_name">KiwiApp</string>
 <string name="ist">ist</string>
 
 <string name="kiwi_appwidget_info">KiwiConverterWidget</string>
+<color name="black">#000</color>
+
+
+<color name="lightgrey">#AAAAAA</color>
+
 </resources>
