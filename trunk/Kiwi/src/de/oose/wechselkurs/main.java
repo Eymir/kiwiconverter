@@ -4,11 +4,15 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
 import android.widget.TextView;
+import de.oose.wechselkurs.prefs.KiwiPreferences;
 
 public class main extends Activity {
 	private TextView value1, value2;
@@ -71,5 +75,26 @@ public class main extends Activity {
 	private void setValue2(double aValue) {
 		value1.setText(formatCurrency(aValue / rate, Currency1));
 		value2.setText(formatCurrency(aValue, Currency2));
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.main_menu, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.main_menu_prefs:
+			Intent intent = new Intent(this, KiwiPreferences.class);
+			startActivity(intent);
+			return true;
+		case R.id.main_menu_close:
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 }
