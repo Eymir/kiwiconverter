@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Währungen">
+		<EditTextPreference android:title="Währung 1"
+			android:defaultValue="EUR" android:summary="Die erste Währung" android:key="prefs_currency_1"></EditTextPreference>
+		<EditTextPreference android:title="Währung 2"
+			android:defaultValue="NZD" android:summary="Die zweite Währung" android:key="prefs_currency_2"></EditTextPreference>
+	</PreferenceCategory>
+</PreferenceScreen>
