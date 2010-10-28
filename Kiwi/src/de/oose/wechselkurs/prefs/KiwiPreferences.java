@@ -24,5 +24,4 @@ public class KiwiPreferences extends PreferenceActivity {
 		return ctx.getSharedPreferences(ctx.getPackageName() + "_preferences",
 				MODE_PRIVATE);
 	}
-
 }
