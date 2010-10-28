@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-android:id="@+id/widget78"
+android:id="@+id/main"
 android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -50,5 +50,21 @@ android:layout_weight="50"
 >
 </EditText>
 </LinearLayout>
+<RelativeLayout android:id="@+id/RelativeLayout01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/header"><ScrollView android:id="@+id/sliderule" android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="none" android:scrollY="-50px">
+<LinearLayout android:id="@+id/scale" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@color/lightgrey" android:paddingBottom="149px" android:paddingTop="149px">
+<TextView android:text="1024" android:id="@+id/t1024" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="512" android:id="@+id/t512" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="256" android:id="@+id/t256" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="128" android:id="@+id/t128" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="64" android:id="@+id/t64" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="32" android:id="@+id/t32" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="16" android:id="@+id/t16" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="8" android:id="@+id/t8" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="4" android:id="@+id/t4" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="2" android:id="@+id/t2" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>
+<TextView android:text="1" android:id="@+id/t1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="60px" android:textColor="@color/black" android:gravity="center_horizontal"></TextView>	
+</LinearLayout>
+
+</ScrollView><ImageView android:id="@+id/redLine" android:layout_height="wrap_content" android:src="@drawable/redline" android:clickable="false" android:layout_width="fill_parent" android:layout_centerInParent="true" android:scaleType="fitXY"></ImageView></RelativeLayout>
 
 </RelativeLayout>
