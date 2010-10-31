@@ -124,13 +124,17 @@ public class main extends Activity {
 		}
 		super.onActivityResult(requestCode, resultCode, data);
 	}
-
-
 	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		initCurrencies();
+	}
+
 	private void initCurrencies() {
 		SharedPreferences prefs = KiwiPreferences.getPreferences(getApplication());
-		currency1 = prefs.getString("prefs_currency_1", currency1);
-		currency2 = prefs.getString("prefs_currency_2", currency2);
+		currency1 = prefs.getString("prefs_currency_1", currency1).trim();
+		currency2 = prefs.getString("prefs_currency_2", currency2).trim();
 		updateRate();
 	}
 
