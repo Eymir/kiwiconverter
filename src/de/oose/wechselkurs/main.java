@@ -45,12 +45,13 @@ public class main extends Activity {
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		Log.d("oncreate","start");
 		try {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.main);
 			value1 = (TextView) findViewById(R.id.value1);
 			value2 = (TextView) findViewById(R.id.value2);
-			sliderule = (ScrollView) findViewById(R.id.sliderule);
+			sliderule = (Ruler) findViewById(R.id.sliderule);
 			//final LinearLayout scale = (LinearLayout) findViewById(R.id.scale);
 			value1.requestFocus();
 			value1.setOnFocusChangeListener(value1Listener);
@@ -124,17 +125,13 @@ public class main extends Activity {
 		}
 		super.onActivityResult(requestCode, resultCode, data);
 	}
-	
-	@Override
-	protected void onResume() {
-		super.onResume();
-		initCurrencies();
-	}
 
+
+	
 	private void initCurrencies() {
 		SharedPreferences prefs = KiwiPreferences.getPreferences(getApplication());
-		currency1 = prefs.getString("prefs_currency_1", currency1).trim();
-		currency2 = prefs.getString("prefs_currency_2", currency2).trim();
+		currency1 = prefs.getString("prefs_currency_1", currency1);
+		currency2 = prefs.getString("prefs_currency_2", currency2);
 		updateRate();
 	}
 
